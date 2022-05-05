@@ -1,0 +1,66 @@
+<meta charset="UTF-8">
+
+<style>
+
+	body{
+		background-image:url("https://static.vecteezy.com/system/resources/previews/001/836/090/non_2x/abstract-grey-white-background-poster-with-dynamic-waves-vector.jpg");
+		background-repeat:no-repeat;
+		background-size: cover;
+	}
+
+ </style>
+
+<center>
+
+<font face="algerian" size="50px">ENCRIPTADOR DE 64 bits</font>
+<br>
+<br>
+<br>
+<br>
+<body>
+	<img width="20%" height="20%" src="https://c.tenor.com/Kw4Cx9nPGEwAAAAC/alfabeto-abc.gif">
+</body>
+<br>
+<br>
+<br>
+<br>
+<body>
+	<form>
+		
+		<input maxlength="100" type="text" style="width:1000px;height:50px">
+
+	</form>
+</body>
+<button type="submit" onclick="encriptar(this)"><font face="algerian" size="5px">Encriptar</font></button>
+<button type="submit" onclick="desencriptar(this)"><font face="algerian" size="5px">Desencriptar</font></button>
+<br>
+<br>
+<h3>TU PALABRA ENCRIPTADA:</h3>
+<p  id="resultado"></p>
+<br>
+<h3>TU PALABRA DESENCRIPTADA:</h3>
+<p id="resultado2"></p>
+
+
+</center>
+
+
+
+<script>
+
+	function encriptar(elementos) {
+		var palabra = document.getElementsByTagName("input")[0].value;
+		var palabra_codificada = btoa(palabra);
+		document.getElementById("resultado").innerHTML=palabra_codificada;
+
+	}
+
+	function desencriptar(elementos) {
+		var palabra = document.getElementsByTagName("input")[0].value;
+		var palabra_descodificada = atob(palabra);
+		document.getElementById("resultado2").innerHTML=palabra_descodificada;
+
+	}
+
+
+</script>
